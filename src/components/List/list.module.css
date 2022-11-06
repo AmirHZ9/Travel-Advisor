@@ -1,0 +1,11 @@
+.listContainer{
+
+    margin: 10px !important;
+}
+.formControl{
+    margin-top:30px ;
+    min-width: 80px !important;
+}
+.list{
+    margin-top: 30px !important;
+}
