@@ -8,4 +8,6 @@
 }
 .list{
     margin-top: 30px !important;
+    overflow: scroll;
+    max-height: 100vh;
 }

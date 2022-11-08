@@ -2,18 +2,10 @@ import React, { useState } from 'react';
 import {FormControl, InputLabel, MenuItem, Select, Typography,Grid} from '@material-ui/core'
 import style from '../List/list.module.css'
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
-const List = () => {
+const List = ({places}) => {
     const [type,setType]=useState('restaurants')
     const [rating,setRating] = useState('')
 
-
-    const places = [
-        {name:"first place"},
-        {name:"second place"},
-        {name:"third place"},
-        {name:"forth place"}
-
-    ]
     return (
         <div className={style.listContainer}>
             <Typography variant="h4" className={style.listTitle}>
@@ -37,9 +29,9 @@ const List = () => {
                 </Select>
             </FormControl>
 
-            <Grid container spacing={3} className={style.list}>
-                {places?.map((item,i) => (
-                    <Grid item key={i} xs={12}>
+            <Grid container spacing={3} className={style.list} >
+                {places?.map((item,i) => ( 
+                    <Grid item key={i} xs={12} >
                         <PlaceDetails places={item}/>
                     </Grid>
                 ))}
