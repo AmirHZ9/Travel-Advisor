@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import {FormControl, InputLabel, MenuItem, Select, Typography,Grid} from '@material-ui/core'
 import style from '../List/list.module.css'
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
-const List = ({places}) => {
+const List = ({places,childClick}) => {
     const [type,setType]=useState('restaurants')
     const [rating,setRating] = useState('')
-
+console.log({childClick})
     return (
         <div className={style.listContainer}>
             <Typography variant="h4" className={style.listTitle}>
